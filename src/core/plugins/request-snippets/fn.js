@@ -87,7 +87,7 @@ const curlify = (request, escape, newLine, ext = "") => {
     addWords(...request.get("curlOptions"))
   }
 
-  addWords("-X", request.get("method"))
+  addWords("-L", "-X", request.get("method"))
 
   addNewLine()
   addIndent()
